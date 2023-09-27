@@ -35,3 +35,7 @@ class Participante:
 
     def listarNotas(self):
         return self.__nota_lista_parti
+
+    def __str__(self):
+        return f"ID: {self.getIdParticipante()}, Código Participante: {self.getCodigoParticipante()}, " \
+               f"Razão Social: {self.getRazaoSocial()}, CNPJ: {self.getCnpj()}"

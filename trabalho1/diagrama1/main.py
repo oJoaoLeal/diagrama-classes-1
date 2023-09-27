@@ -1,8 +1,8 @@
-from diagrama1.Model.Empresa import Empresa
-from diagrama1.Model.Nota import Nota
-from diagrama1.Model.ItemNota import ItemNota
-from diagrama1.Model.Participante import Participante
-from diagrama1.Model.Produto import Produto
+from Model.Empresa import Empresa
+from Model.Nota import Nota
+from Model.ItemNota import ItemNota
+from Model.Participante import Participante
+from Model.Produto import Produto
 
 
 if __name__ == '__main__':
@@ -21,13 +21,8 @@ if __name__ == '__main__':
     empresa2.setEndereco("Endereço B")
     empresa2.setCnpj("987654321")
 
-    print()
-    print("Empresa:")
-    print(f"Id Empresa: {empresa1.getIdEmpresa()}")
-    print(f"Código: {empresa1.getCodigo()}")
-    print(f"Razão Social: {empresa1.getRazaoSocial()}")
-    print(f"Endereço: {empresa1.getEndereco()}")
-    print(f"Cnpj: {empresa1.getCnpj()}")
+    print("Empresa 1:")
+    print(empresa1.__str__())
 
     # Criando Notas
     nota1 = Nota()
@@ -55,11 +50,8 @@ if __name__ == '__main__':
     nota4.setNumero(4)
     
     print()
-    print("Nota:")
-    print(f"Empresa: {nota1.getEmpresa()}")
-    print(f"Id Nota : {nota1.getIdNota()}")
-    print(f"Data: {nota1.getData()}")
-    print(f"Número: {nota1.getNumero()}")
+    print("Nota 1:")
+    print(nota1.__str__())
 
     # Inserido as notas criadas na "lista_notas"
     empresa1.addNota(nota1)
@@ -68,7 +60,7 @@ if __name__ == '__main__':
     empresa2.addNota(nota4)
 
     print()
-    print("Lista de notas na empresa 1:")
+    print("Lista de notas na Empresa 1:")
     for nota in empresa1.getNotas():
         print(nota)
 
@@ -93,6 +85,10 @@ if __name__ == '__main__':
     item4.setVrUnitario(12.5)
     item4.setIdItemNota(4)
 
+    print()
+    print("Item Nota 1:")
+    print(item1.__str__())
+
     # Criando Produtos
     prod1 = Produto()
     prod1.setIdProduto(1)
@@ -116,9 +112,7 @@ if __name__ == '__main__':
 
     print()
     print("Produto:")
-    print(f"Id Produto: {prod1.getIdProduto()}")
-    print(f"Código Produto: {prod1.getCodigoProduto()}")
-    print(f"Descrição: {prod1.getDescricao()}")
+    print(prod1.__str__())
 
     partici1 = Participante()
     partici1.setIdParticipante(1)
@@ -140,10 +134,7 @@ if __name__ == '__main__':
 
     print()
     print("Participante:")
-    print(f"Id: {partici1.getIdParticipante()}")
-    print(f"Código: {partici1.getCodigoParticipante()}")
-    print(f"Razão Social: {partici1.getRazaoSocial()}")
-    print(f"CNPJ: {partici1.getCnpj()}")
+    print(partici1.__str__())
 
     # Notas pertencentes a empresa1
     nota1.addItensNota(item1)

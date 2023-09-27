@@ -43,3 +43,7 @@ class Empresa:
 
     def getNotas(self):
         return self.__lista_notas
+
+    def __str__(self):
+        return f"Código: {self.getCodigo()}, ID Empresa: {self.getIdEmpresa()}, " \
+               f"Razão Social: {self.getRazaoSocial()}, Endereço: {self.getEndereco()}, CNPJ: {self.getCnpj()}"

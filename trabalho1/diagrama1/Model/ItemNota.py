@@ -25,3 +25,6 @@ class ItemNota:
 
     def listarProdutos(self):
         return self.__lista_produtos
+
+    def __str__(self):
+        return f"ID: {self.getIdItemNota()}, VrUnitário: {self.getVrUnitario()}, Quantidade: {self.getQuantidade()}"

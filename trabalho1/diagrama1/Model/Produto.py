@@ -23,3 +23,6 @@ class Produto:
     def getDescricao(self):
         return self.__descricao
 
+    def __str__(self):
+        return f"ID: {self.getIdProduto()}, Código: {self.getCodigoProduto()}, Descrição: {self.getDescricao()}"
+

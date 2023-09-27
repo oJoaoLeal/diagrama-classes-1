@@ -1,5 +1,4 @@
-from diagrama1.Model.Empresa import Empresa
-from diagrama1.Model.ItemNota import ItemNota
+from .Empresa import Empresa
 
 
 class Nota:
@@ -48,4 +47,5 @@ class Nota:
         return self.__lista_itens_nota
 
     def __str__(self):
-        return f"ID: {self.getIdNota()}, Data: {self.getData()}, Número: {self.getNumero()}, VrTotal: R${self.getVrTotal()}"
+        return f"ID: {self.getIdNota()}, Data: {self.getData()}, " \
+               f"Número: {self.getNumero()}, VrTotal: R${self.getVrTotal()}"
