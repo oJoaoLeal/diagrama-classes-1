@@ -3,6 +3,7 @@ class Produto:
         self.__id_produto = 0
         self.__codigo_produto = 0
         self.__descricao = ''
+        self.__itemNota = ''
         self.item_nota_lista = []
 
     def setIdProduto(self, id_produto):
@@ -23,6 +24,12 @@ class Produto:
     def getDescricao(self):
         return self.__descricao
 
-    def __str__(self):
-        return f"ID: {self.getIdProduto()}, Código: {self.getCodigoProduto()}, Descrição: {self.getDescricao()}"
+    def setItemNota(self, item_nota):
+        self.__itemNota = item_nota
 
+    def getItemNota(self):
+        return self.__itemNota
+
+    def __str__(self):
+        return f"ID: {self.getIdProduto()}\nCódigo: {self.getCodigoProduto()}\n" \
+               f"Descrição: {self.getDescricao()}"

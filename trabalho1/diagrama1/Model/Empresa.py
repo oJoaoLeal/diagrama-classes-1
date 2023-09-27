@@ -45,5 +45,5 @@ class Empresa:
         return self.__lista_notas
 
     def __str__(self):
-        return f"Código: {self.getCodigo()}, ID Empresa: {self.getIdEmpresa()}, " \
-               f"Razão Social: {self.getRazaoSocial()}, Endereço: {self.getEndereco()}, CNPJ: {self.getCnpj()}"
+        return f"Código: {self.getCodigo()}\nID Empresa: {self.getIdEmpresa()}\n"\
+               f"Razão Social: {self.getRazaoSocial()}\nEndereço: {self.getEndereco()}\nCNPJ: {self.getCnpj()}"

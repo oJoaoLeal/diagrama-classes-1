@@ -59,13 +59,14 @@ if __name__ == '__main__':
     empresa2.addNota(nota3)
     empresa2.addNota(nota4)
 
-    print()
-    print("Lista de notas na Empresa 1:")
-    for nota in empresa1.getNotas():
-        print(nota)
+    # print()
+    # print("Lista de notas na Empresa 1:")
+    # for nota in empresa1.getNotas():
+    #     print(nota)
 
     # Criando ItensNota
     item1 = ItemNota()
+    item1.setNota(nota1)
     item1.setNota(nota1)
     item1.setIdItemNota(3)
     item1.setVrUnitario(100.00)
@@ -73,11 +74,13 @@ if __name__ == '__main__':
 
     item2 = ItemNota()
     item2.setNota(nota2)
+    item2.setNota(nota2)
     item2.setIdItemNota(2)
     item2.setVrUnitario(50)
     item2.setIdItemNota(2)
 
     item3 = ItemNota()
+    item3.setNota(nota3)
     item3.setNota(nota3)
     item3.setIdItemNota(3)
     item3.setVrUnitario(25)
@@ -85,9 +88,16 @@ if __name__ == '__main__':
 
     item4 = ItemNota()
     item4.setNota(nota4)
+    item4.setNota(nota4)
     item4.setIdItemNota(4)
     item4.setVrUnitario(12.5)
     item4.setIdItemNota(8)
+
+    # Adicionando a lista_itens_nota
+    nota1.addItensNota(item1)
+    nota1.addItensNota(item2)
+    nota2.addItensNota(item3)
+    nota3.addItensNota(item4)
 
     print()
     print("Item Nota:")
@@ -95,21 +105,25 @@ if __name__ == '__main__':
 
     # Criando Produtos
     prod1 = Produto()
+    prod1.setItemNota(item1)
     prod1.setIdProduto(1)
     prod1.setCodigoProduto("001")
     prod1.setDescricao("Mouse")
 
     prod2 = Produto()
+    prod2.setItemNota(item2)
     prod2.setIdProduto(2)
     prod2.setCodigoProduto("002")
     prod2.setDescricao("Monitor")
 
     prod3 = Produto()
+    prod3.setItemNota(item3)
     prod3.setIdProduto(3)
     prod3.setCodigoProduto("003")
     prod3.setDescricao("Teclado")
 
     prod4 = Produto()
+    prod4.setItemNota(item4)
     prod4.setIdProduto(4)
     prod4.setCodigoProduto("004")
     prod4.setDescricao("TV")

@@ -4,7 +4,8 @@ class Participante:
         self.__codigo_participante = 0
         self.__razao_social = ''
         self.__cnpj = 0
-        self.__nota_lista_parti = []
+        # Cada participantes recebe uma nota
+        self.__nota = None
 
     def setIdParticipante(self, id_participante):
         self.__id_participante = id_participante
@@ -30,12 +31,12 @@ class Participante:
     def getCnpj(self):
         return self.__cnpj
 
-    def adicionarNota(self, nota):
-        self.__nota_lista_parti.append(nota)
+    def setNotaParticipante(self, nota):
+        self.__nota = nota
 
-    def listarNotas(self):
-        return self.__nota_lista_parti
+    def getNotaParticipante(self):
+        return self.__nota
 
     def __str__(self):
-        return f"ID: {self.getIdParticipante()}, Código Participante: {self.getCodigoParticipante()}, " \
-               f"Razão Social: {self.getRazaoSocial()}, CNPJ: {self.getCnpj()}"
+        return f"ID: {self.getIdParticipante()}\nCódigo Participante: {self.getCodigoParticipante()}\n" \
+               f"Razão Social: {self.getRazaoSocial()}\nCNPJ: {self.getCnpj()}"
