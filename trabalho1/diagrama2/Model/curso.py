@@ -1,8 +1,13 @@
+from Model.professor import Professor
+from Model.disciplina import Disciplina
+
 class Curso:
 
     def __init__(self) -> None:
         self.__id = 1
         self.__descricao = ""
+        self.__listaProfessor = []
+        self.__listaDisciplina = []
 
     def setId(self, id: int) -> None:
         self.__id = id
@@ -15,3 +20,27 @@ class Curso:
 
     def getDescricao(self) -> str:
         return self.__descricao
+    
+    def setListaProfessor(self, professor) -> None:
+        self.__listaProfessor = professor
+
+    def addListaProfessor(self, professor) -> None:
+        self.__listaProfessor.append(professor)
+
+    def removerListaProfessor(self, professor) -> None:
+        self.__listaProfessor.remove(professor)
+
+    def getListaProfessor(self) -> None:
+        return self.__listaProfessor
+    
+    def setListaDisciplina(self, disciplina) -> None:
+        self.__listaDisciplina = disciplina
+
+    def addListaDisciplina(self, disciplina) -> None:
+        self.__listaDisciplina.append(disciplina)
+
+    def removerListaDisciplina(self, disciplina) -> None:
+        self.__listaDisciplina.remove(disciplina)
+
+    def getListaDisciplina(self) -> None:
+        return self.__listaDisciplina
