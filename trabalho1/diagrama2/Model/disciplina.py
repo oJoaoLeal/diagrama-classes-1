@@ -6,8 +6,8 @@ class Disciplina:
     def __init__(self) -> None:
         self.__id = 1
         self.__descricao = ""
+        self.__curso = ""
         self.__listaTurma = []
-        self.__listaCurso = []
 
     def setId(self, id: int) -> None:
         self.__id = id
@@ -21,27 +21,22 @@ class Disciplina:
     def getDescricao(self) -> str:
         return self.__descricao
     
-    def setListaTurma(self, turma) -> None:
+    def setCurso(self, curso: Curso() ) -> None:
+        self.__curso = curso
+
+    def getCurso(self) -> None:
+        return self.__curso
+    
+    def setListaTurma(self, turma: Turma()) -> None:
         self.__listaTurma = turma
 
-    def addListaTurma(self, turma) -> None:
+    def addListaTurma(self, turma: Turma()) -> None:
         self.__listaTurma.append(turma)
 
-    def removerListaTurma(self, turma) -> None:
+    def removerListaTurma(self, turma: Turma()) -> None:
         self.__listaTurma.remove(turma)
 
     def getListaTurma(self) -> None:
         return self.__listaTurma
     
-    def setListaCurso(self, Curso) -> None:
-        self.__listaCurso = Curso
-
-    def addListaCurso(self, curso) -> None:
-        self.__listaCurso.append(curso)
-
-    def removerListaCurso(self, curso) -> None:
-        self.__listaCurso.remove(curso)
-
-    def getListaCurso(self) -> None:
-        return self.__listaCurso
     

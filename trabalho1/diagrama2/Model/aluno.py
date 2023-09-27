@@ -2,7 +2,7 @@ from Model.pessoa import Pessoa
 from Model.situacao import Situacao
 from Model.diario import Diario
 
-class Aluno(Pessoa):
+class Aluno(Pessoa): # Classe Filho
 
     def __init__(self) -> None:
         super().__init__()
@@ -30,25 +30,25 @@ class Aluno(Pessoa):
     def getSemestreInicio(self) -> int:
         return self.__semestreInicio
     
-    def setListaSituacao(self, situacao) -> None:
+    def setListaSituacao(self, situacao: Situacao()) -> None:
         self.__listaSituacao = situacao
 
-    def addListaSituacao(self, situacao) -> None:
+    def addListaSituacao(self, situacao: Situacao()) -> None:
         self.__listaSituacao.append(situacao)
 
-    def removerListaSituacao(self, situacao) -> None:
+    def removerListaSituacao(self, situacao: Situacao()) -> None:
         self.__listaSituacao.remove(situacao)
 
     def getListaSituacao(self) -> None:
         return self.__listaSituacao
     
-    def setListaDiario(self, diario) -> None:
+    def setListaDiario(self, diario: Diario()) -> None:
         self.__listaDiario = diario
 
-    def addListaDiario(self, diario) -> None:
+    def addListaDiario(self, diario: Diario()) -> None:
         self.__listaDiario.append(diario)
 
-    def removerListaDiario(self, diario) -> None:
+    def removerListaDiario(self, diario: Diario()) -> None:
         self.__listaDiario.remove(diario)
 
     def getListaDiario(self) -> None:

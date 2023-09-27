@@ -4,9 +4,9 @@ from Model.disciplina import Disciplina
 class Curso:
 
     def __init__(self) -> None:
+        self.__professor = Professor()
         self.__id = 1
         self.__descricao = ""
-        self.__professor = Professor()
         self.__listaProfessor = []
         self.__listaDisciplina = []
 
@@ -22,25 +22,25 @@ class Curso:
     def getDescricao(self) -> str:
         return self.__descricao
     
-    def setListaProfessor(self, professor) -> None:
+    def setListaProfessor(self, professor: Professor()) -> None:
         self.__listaProfessor = professor
 
-    def addListaProfessor(self, professor) -> None:
+    def addListaProfessor(self, professor: Professor()) -> None:
         self.__listaProfessor.append(professor)
 
-    def removerListaProfessor(self, professor) -> None:
+    def removerListaProfessor(self, professor: Professor()) -> None:
         self.__listaProfessor.remove(professor)
 
     def getListaProfessor(self) -> None:
         return self.__listaProfessor
     
-    def setListaDisciplina(self, disciplina) -> None:
+    def setListaDisciplina(self, disciplina: Disciplina()) -> None:
         self.__listaDisciplina = disciplina
 
-    def addListaDisciplina(self, disciplina) -> None:
+    def addListaDisciplina(self, disciplina: Disciplina()) -> None:
         self.__listaDisciplina.append(disciplina)
 
-    def removerListaDisciplina(self, disciplina) -> None:
+    def removerListaDisciplina(self, disciplina: Disciplina()) -> None:
         self.__listaDisciplina.remove(disciplina)
 
     def getListaDisciplina(self) -> None:

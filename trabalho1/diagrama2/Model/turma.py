@@ -10,10 +10,10 @@ class Turma:
         self.__descricao = 1
         self.__ano = 1
         self.__semestre = 1
+        self.__instituicao = ""
+        self.__disciplina = ""
+        self.__professor = ""
         self.__listaDiario = []
-        self.__listaProfessor = []
-        self.__listaInstituicao = []
-        self.__listaDisciplina = []
 
     def setId(self, id: int) -> None:
         self.__id = id
@@ -39,50 +39,34 @@ class Turma:
     def getSemestre(self) -> int:
         return self.__semestre
     
-    def setListaDiario(self, diario) -> None:
+    def setInstituicao(self, instituicao: Instituicao()) -> None:
+        self.__instituicao = instituicao
+
+    def getInstituicao(self) -> None:
+        return self.__instituicao
+    
+    def setDisciplina(self, disciplina: Disciplina()) -> None:
+        self.__disciplina = disciplina
+
+    def getDisciplina(self) -> None:
+        return self.__disciplina
+    
+    def setProfessor(self, professor: Professor()) -> None:
+        self.__professor = professor
+
+    def getProfessor(self) -> None:
+        return self.__professor
+    
+    def setListaDiario(self, diario: Diario()) -> None:
         self.__listaDiario = diario
 
-    def addListaDiario(self, diario) -> None:
+    def addListaDiario(self, diario: Diario()) -> None:
         self.__listaDiario.append(diario)
 
-    def removerListaDiario(self, diario) -> None:
+    def removerListaDiario(self, diario: Diario()) -> None:
         self.__listaDiario.remove(diario)
 
     def getListaDiario(self) -> None:
         return self.__listaDiario
     
-    def setListaProfessor(self, professor) -> None:
-        self.__listaProfessor = professor
-
-    def addListaProfessor(self, professor) -> None:
-        self.__listaProfessor.append(professor)
-
-    def removerListaProfessor(self, professor) -> None:
-        self.__listaProfessor.remove(professor)
-
-    def getListaProfessor(self) -> None:
-        return self.__listaProfessor
     
-    def setListaInstituicao(self, instituicao) -> None:
-        self.__listaInstituicao = instituicao
-
-    def addListaInstituicao(self, instituicao) -> None:
-        self.__listaInstituicao.append(instituicao)
-
-    def removerListaInstituiao(self, instituicao) -> None:
-        self.__listaInstituicao.remove(instituicao)
-
-    def getListaInstituicao(self) -> None:
-        return self.__listaInstituicao
-    
-    def setListaDisciplina(self, disciplina) -> None:
-        self.__listaDisciplina = disciplina
-
-    def addListaDisciplina(self, disciplina) -> None:
-        self.__listaDisciplina.append(disciplina)
-
-    def removerListaDisciplina(self, disciplina) -> None:
-        self.__listaDisciplina.remove(disciplina)
-
-    def getListaDisciplina(self) -> None:
-        return self.__listaDisciplina

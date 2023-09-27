@@ -1,7 +1,7 @@
 # import datetime
 # from datetime import date
 
-class Pessoa:
+class Pessoa: # Classe Pai
 
     def __init__(self) -> None:
         self.__id = 1

@@ -19,13 +19,13 @@ class Instituicao:
     def getDescricao(self) -> str:
         return self.__descricao
     
-    def setListaTurma(self, turma) -> None:
+    def setListaTurma(self, turma: Turma()) -> None:
         self.__listaTurma = turma
 
-    def addListaTurma(self, turma) -> None:
+    def addListaTurma(self, turma: Turma()) -> None:
         self.__listaTurma.append(turma)
 
-    def removerListaTurma(self, turma) -> None:
+    def removerListaTurma(self, turma: Turma()) -> None:
         self.__listaTurma.remove(turma)
 
     def getListaTurma(self) -> None:
