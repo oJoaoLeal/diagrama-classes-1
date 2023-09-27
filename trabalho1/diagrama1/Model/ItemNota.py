@@ -1,9 +1,19 @@
+from .Nota import Nota
+
+
 class ItemNota:
     def __init__(self):
         self.__id_item_nota = 0
         self.__vr_unitario = 0
         self.__quantidade = 0
         self.__lista_produtos = []
+        self.__nota = ""
+
+    def setNota(self, nota: Nota):
+        self.__nota = nota
+
+    def getNota(self):
+        return self.__nota
 
     def setIdItemNota(self, id_item_nota):
         self.__id_item_nota = id_item_nota
@@ -15,7 +25,7 @@ class ItemNota:
         self.__vr_unitario = vr_unitario
 
     def getVrUnitario(self):
-        return self.__vr_unitario * self.__quantidade
+        return self.__vr_unitario
 
     def getQuantidade(self):
         return self.__quantidade
@@ -27,4 +37,5 @@ class ItemNota:
         return self.__lista_produtos
 
     def __str__(self):
-        return f"ID: {self.getIdItemNota()}, VrUnitário: {self.getVrUnitario()}, Quantidade: {self.getQuantidade()}"
+        return f"ID: {self.getIdItemNota()}, VrUnitário: {self.getVrUnitario()}, " \
+               f"Quantidade: {self.getQuantidade()} \nNotaAssociada: {self.getNota()}"

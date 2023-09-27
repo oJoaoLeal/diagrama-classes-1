@@ -34,16 +34,15 @@ class Nota:
     def setNumero(self, numero):
         self.__numero = numero
 
-    def getVrTotal(self):
+    @staticmethod
+    def getVrTotal():
         total = 0
-        for item in self.getListaItemNota():
-            total += item.getVrUnitario() * item.getQuantidade()
         return total
 
     def addItensNota(self, item):
         self.__lista_itens_nota.append(item)
 
-    def getListaItemNota(self):
+    def getListaItensNota(self):
         return self.__lista_itens_nota
 
     def __str__(self):

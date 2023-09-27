@@ -21,7 +21,7 @@ if __name__ == '__main__':
     empresa2.setEndereco("Endereço B")
     empresa2.setCnpj("987654321")
 
-    print("Empresa 1:")
+    print("Empresa:")
     print(empresa1.__str__())
 
     # Criando Notas
@@ -50,7 +50,7 @@ if __name__ == '__main__':
     nota4.setNumero(4)
     
     print()
-    print("Nota 1:")
+    print("Nota:")
     print(nota1.__str__())
 
     # Inserido as notas criadas na "lista_notas"
@@ -66,27 +66,31 @@ if __name__ == '__main__':
 
     # Criando ItensNota
     item1 = ItemNota()
+    item1.setNota(nota1)
     item1.setIdItemNota(3)
-    item1.setVrUnitario(10.0)
+    item1.setVrUnitario(100.00)
     item1.setIdItemNota(1)
 
     item2 = ItemNota()
+    item2.setNota(nota2)
     item2.setIdItemNota(2)
-    item2.setVrUnitario(50.0)
+    item2.setVrUnitario(50)
     item2.setIdItemNota(2)
 
     item3 = ItemNota()
+    item3.setNota(nota3)
     item3.setIdItemNota(3)
-    item3.setVrUnitario(25.0)
+    item3.setVrUnitario(25)
     item3.setIdItemNota(4)
 
     item4 = ItemNota()
+    item4.setNota(nota4)
     item4.setIdItemNota(4)
     item4.setVrUnitario(12.5)
-    item4.setIdItemNota(4)
+    item4.setIdItemNota(8)
 
     print()
-    print("Item Nota 1:")
+    print("Item Nota:")
     print(item1.__str__())
 
     # Criando Produtos
@@ -157,10 +161,12 @@ if __name__ == '__main__':
     print("Notas da empresa 1: ")
     for nota in notas_empresa1:
         print(
-            f"ID: {nota.getIdNota()}, Data: {nota.getData()}, Número: {nota.getNumero()}, VrTotal: R${nota.getVrTotal()}")
+            f"ID: {nota.getIdNota()}, Data: {nota.getData()}, "
+            f"Número: {nota.getNumero()}, VrTotal: R${nota.getVrTotal()}")
     print("\n")
 
     print("Notas da empresa 2:")
     for nota in notas_empresa2:
         print(
-            f"ID: {nota.getIdNota()}, Data: {nota.getData()}, Número: {nota.getNumero()}, VrTotal: R${nota.getVrTotal()}")
+            f"ID: {nota.getIdNota()}, Data: {nota.getData()}, "
+            f"Número: {nota.getNumero()}, VrTotal: R${nota.getVrTotal()}")
