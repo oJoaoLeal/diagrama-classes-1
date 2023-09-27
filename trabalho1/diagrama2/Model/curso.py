@@ -6,6 +6,7 @@ class Curso:
     def __init__(self) -> None:
         self.__id = 1
         self.__descricao = ""
+        self.__professor = Professor()
         self.__listaProfessor = []
         self.__listaDisciplina = []
 
