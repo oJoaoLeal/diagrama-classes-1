@@ -1,6 +1,3 @@
-from Model.aluno import Aluno
-from Model.turma import Turma
-
 class Diario:
 
     def __init__(self) -> None:
@@ -42,15 +39,21 @@ class Diario:
     def getFaltas(self) -> int:
         return self.__faltas
     
-    def setAluno(self, aluno: Aluno()) -> None:
+    def setAluno(self, aluno) -> None:
         self.__aluno = aluno
 
     def getListaAluno(self) -> None:
         return self.__aluno
     
-    def setTurma(self, turma: Turma()) -> None:
+    def setTurma(self, turma) -> None:
         self.__turma = turma
 
     def getTurma(self) -> None:
         return self.__turma
+    
+    def __str__(self) -> None:
+        return f"V1: {self.getV1()}\nV2: {self.getV2()}\n" \
+               f"VS: {self.getVS()}\nVT: {self.getVT()}\n" \
+               f"Faltas: {self.getFaltas()}"
+
     

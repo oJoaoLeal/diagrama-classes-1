@@ -1,6 +1,4 @@
 from Model.pessoa import Pessoa
-from Model.situacao import Situacao
-from Model.diario import Diario
 
 class Aluno(Pessoa): # Classe Filho
 
@@ -30,26 +28,34 @@ class Aluno(Pessoa): # Classe Filho
     def getSemestreInicio(self) -> int:
         return self.__semestreInicio
     
-    def setListaSituacao(self, situacao: Situacao()) -> None:
+    def setListaSituacao(self, situacao) -> None:
         self.__listaSituacao = situacao
 
-    def addListaSituacao(self, situacao: Situacao()) -> None:
+    def addListaSituacao(self, situacao) -> None:
         self.__listaSituacao.append(situacao)
 
-    def removerListaSituacao(self, situacao: Situacao()) -> None:
+    def removerListaSituacao(self, situacao) -> None:
         self.__listaSituacao.remove(situacao)
 
     def getListaSituacao(self) -> None:
         return self.__listaSituacao
     
-    def setListaDiario(self, diario: Diario()) -> None:
+    def setListaDiario(self, diario) -> None:
         self.__listaDiario = diario
 
-    def addListaDiario(self, diario: Diario()) -> None:
+    def addListaDiario(self, diario) -> None:
         self.__listaDiario.append(diario)
 
-    def removerListaDiario(self, diario: Diario()) -> None:
+    def removerListaDiario(self, diario) -> None:
         self.__listaDiario.remove(diario)
 
     def getListaDiario(self) -> None:
         return self.__listaDiario
+    
+    def __str__(self) -> None:
+        return f"ID: {self.getId()}\nNome: {self.getNome()}\n" \
+               f"CPF: {self.getCpf()}\nData de Nascimento: {self.getDataNascimento()}\n" \
+               f"Email: {self.getEmail()}\nEndereço: {self.getEndereco()}\n" \
+               f"Telefone: {self.getTelefone()}\nIdentidade: {self.getIdentidade()}\n" \
+               f"Matricula: {self.getMatricula()}\nAno de Inicio: {self.getAnoInicio()}\n" \
+               f"Semestre de inicio: {self.getSemestreInicio()}"

@@ -1,5 +1,3 @@
-from Model.aluno import Aluno
-
 class Situacao:
 
     def __init__(self) -> None:
@@ -19,14 +17,17 @@ class Situacao:
     def getAnoSemestre(self) -> int:
         return self.__anoSemestre
     
-    def setListaAluno(self, aluno: Aluno()) -> None:
+    def setListaAluno(self, aluno) -> None:
         self.__listaAluno = aluno
 
-    def addListaAluno(self, aluno: Aluno()) -> None:
+    def addListaAluno(self, aluno) -> None:
         self.__listaAluno.append(aluno)
 
-    def removerListaAluno(self, aluno: Aluno()) -> None:
+    def removerListaAluno(self, aluno) -> None:
         self.__listaAluno.remove(aluno)
 
     def getListaAluno(self) -> None:
         return self.__listaAluno
+    
+    def __str__(self) -> None:
+        return f"Situação: {self.getSituacao()}\nAno e Semestre: {self.getAnoSemestre()}"

@@ -60,3 +60,9 @@ class Pessoa: # Classe Pai
 
     def getIdentidade(self) -> str:
         return self.__identidade
+    
+    def __str__(self) -> None:
+        return f"ID: {self.getId()}\nNome: {self.getNome()}\n" \
+               f"CPF: {self.getCpf()}\nData de Nascimento: {self.getDataNascimento()}\n" \
+               f"Email: {self.getEmail()}\nEndereço: {self.getEndereco()}\n" \
+               f"Telefone: {self.getTelefone()}\nIdentidade: {self.getIdentidade()}"

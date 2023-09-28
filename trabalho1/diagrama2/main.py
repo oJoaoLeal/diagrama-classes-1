@@ -1,4 +1,3 @@
-from Model.pessoa import Pessoa
 from Model.aluno import Aluno
 from Model.professor import Professor
 from Model.situacao import Situacao

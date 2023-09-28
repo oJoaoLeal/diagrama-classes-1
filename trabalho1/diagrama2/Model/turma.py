@@ -1,8 +1,3 @@
-from Model.diario import Diario
-from Model.professor import Professor
-from Model.instituicao import Instituicao
-from Model.disciplina import Disciplina
-
 class Turma:
 
     def __init__(self) -> None:
@@ -39,34 +34,38 @@ class Turma:
     def getSemestre(self) -> int:
         return self.__semestre
     
-    def setInstituicao(self, instituicao: Instituicao()) -> None:
+    def setInstituicao(self, instituicao) -> None:
         self.__instituicao = instituicao
 
     def getInstituicao(self) -> None:
         return self.__instituicao
     
-    def setDisciplina(self, disciplina: Disciplina()) -> None:
+    def setDisciplina(self, disciplina) -> None:
         self.__disciplina = disciplina
 
     def getDisciplina(self) -> None:
         return self.__disciplina
     
-    def setProfessor(self, professor: Professor()) -> None:
+    def setProfessor(self, professor) -> None:
         self.__professor = professor
 
     def getProfessor(self) -> None:
         return self.__professor
     
-    def setListaDiario(self, diario: Diario()) -> None:
+    def setListaDiario(self, diario) -> None:
         self.__listaDiario = diario
 
-    def addListaDiario(self, diario: Diario()) -> None:
+    def addListaDiario(self, diario) -> None:
         self.__listaDiario.append(diario)
 
-    def removerListaDiario(self, diario: Diario()) -> None:
+    def removerListaDiario(self, diario) -> None:
         self.__listaDiario.remove(diario)
 
     def getListaDiario(self) -> None:
         return self.__listaDiario
+    
+    def __str__(self) -> None:
+        return f"ID: {self.getId()}\nDescrição: {self.getDescricao()}\n" \
+               f"Ano: {self.getAno()}\nSemestre: {self.getSemestre()}"
     
     

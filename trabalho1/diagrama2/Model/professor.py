@@ -1,6 +1,4 @@
 from Model.pessoa import Pessoa
-from Model.turma import Turma
-from Model.curso import Curso
 
 class Professor(Pessoa): # Classe Filho
 
@@ -23,27 +21,34 @@ class Professor(Pessoa): # Classe Filho
     def getTitulacaoMaxima(self) -> int:
         return self.__titulacaoMaxima
     
-    def setListaTurma(self, turma: Turma()) -> None:
+    def setListaTurma(self, turma) -> None:
         self.__listaTurma = turma
 
-    def addListaTurma(self, turma: Turma()) -> None:
+    def addListaTurma(self, turma) -> None:
         self.__listaTurma.append(turma)
 
-    def removerListaTurma(self, turma: Turma()) -> None:
+    def removerListaTurma(self, turma) -> None:
         self.__listaTurma.remove(turma)
 
     def getListaTurma(self) -> None:
         return self.__listaTurma
     
-    def setListaCurso(self, Curso: Curso()) -> None:
-        self.__listaCurso = Curso
+    def setListaCurso(self, curso) -> None:
+        self.__listaCurso = curso
 
-    def addListaCurso(self, curso: Curso()) -> None:
+    def addListaCurso(self, curso) -> None:
         self.__listaCurso.append(curso)
 
-    def removerListaCurso(self, curso: Curso()) -> None:
+    def removerListaCurso(self, curso) -> None:
         self.__listaCurso.remove(curso)
 
     def getListaCurso(self) -> None:
         return self.__listaCurso
+    
+    def __str__(self) -> None:
+        return f"ID: {self.getId()}\nNome: {self.getNome()}\n" \
+               f"CPF: {self.getCpf()}\nData de Nascimento: {self.getDataNascimento()}\n" \
+               f"Email: {self.getEmail()}\nEndereço: {self.getEndereco()}\n" \
+               f"Telefone: {self.getTelefone()}\nIdentidade: {self.getIdentidade()}\n" \
+               f"Matricula: {self.getMatricula()}\nTitulação Maxima: {self.getTitulacaoMaxima()}"
     

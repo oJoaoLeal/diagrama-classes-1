@@ -1,6 +1,3 @@
-from Model.turma import Turma
-from Model.curso import Curso
-
 class Disciplina:
 
     def __init__(self) -> None:
@@ -21,22 +18,25 @@ class Disciplina:
     def getDescricao(self) -> str:
         return self.__descricao
     
-    def setCurso(self, curso: Curso() ) -> None:
+    def setCurso(self, curso) -> None:
         self.__curso = curso
 
     def getCurso(self) -> None:
         return self.__curso
     
-    def setListaTurma(self, turma: Turma()) -> None:
+    def setListaTurma(self, turma) -> None:
         self.__listaTurma = turma
 
-    def addListaTurma(self, turma: Turma()) -> None:
+    def addListaTurma(self, turma) -> None:
         self.__listaTurma.append(turma)
 
-    def removerListaTurma(self, turma: Turma()) -> None:
+    def removerListaTurma(self, turma) -> None:
         self.__listaTurma.remove(turma)
 
     def getListaTurma(self) -> None:
         return self.__listaTurma
+    
+    def __str__(self) -> None:
+        return f"ID: {self.getId()}\nDescrição: {self.getDescricao()}"
     
     
