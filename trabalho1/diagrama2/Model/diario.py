@@ -1,10 +1,10 @@
 class Diario:
 
     def __init__(self) -> None:
-        self.__v1 = 1.1
-        self.__v2 = 1.1
-        self.__vS = 1.1
-        self.__vT = 1.1
+        self.__v1 = 1
+        self.__v2 = 1
+        self.__vS = 1
+        self.__vT = 1
         self.__faltas = 1
         self.__aluno = ""
         self.__turma = ""

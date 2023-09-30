@@ -4,10 +4,6 @@ from Model.ItemNota import ItemNota
 from Model.Participante import Participante
 from Model.Produto import Produto
 
-'''
-Teste do giácopo
-'''
-
 if __name__ == '__main__':
     # Criando Empresa
     empresa1 = Empresa()
