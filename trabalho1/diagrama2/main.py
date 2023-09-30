@@ -35,6 +35,12 @@ if __name__ == "__main__":
     aluno2.setAnoInicio(2020)
     aluno2.setSemestreInicio(2)
 
+    print("1) Aluno:")
+    print(aluno1.__str__())
+    print('------------------')
+    print("2) Aluno:")
+    print(aluno2.__str__())
+
     # Criando Professor 
     professor1 = Professor()
     professor1.setId(55875)
@@ -60,6 +66,13 @@ if __name__ == "__main__":
     professor2.setMatricula("12575400")
     professor2.setTitulacaoMaxima(2)
 
+    print()
+    print("1) Professor:")
+    print(professor1.__str__())
+    print('------------------')
+    print("2) Professor:")
+    print(professor2.__str__())
+
     # Criando Situação
     situacao1 = Situacao()
     situacao1.setSituacao(1)
@@ -70,6 +83,13 @@ if __name__ == "__main__":
     situacao2.setSituacao(2)
     situacao2.setAnoSemestre(2022)
     situacao2.addListaAluno(aluno2)
+
+    print()
+    print("1) Situação:")
+    print(situacao1.__str__())
+    print('------------------')
+    print("2) Situação:")
+    print(situacao2.__str__())
 
     # Criando Turma
     turma1 = Turma()
@@ -84,9 +104,14 @@ if __name__ == "__main__":
     turma2.setDescricao(2)
     turma2.setAno(2022)
     turma2.setSemestre(2)
-    turma2.setInstituicao(instituicao2)
-    turma2.setDisciplina(disciplina2)
     turma2.setProfessor(professor2)
+
+    print()
+    print("1) Turma:")
+    print(turma1.__str__())
+    print('------------------')
+    print("2) Turma:")
+    print(turma2.__str__())
 
     # Criando Diário
     diario1 = Diario()
@@ -106,6 +131,13 @@ if __name__ == "__main__":
     diario2.setFaltas(7)
     diario2.setAluno(aluno2)
     diario2.setTurma(turma2)
+
+    print()
+    print("1) Diário:")
+    print(diario1.__str__())
+    print('------------------')
+    print("2) Diário:")
+    print(diario2.__str__())
     
     # Criando Instituição
     instituicao1 = Instituicao()
@@ -118,6 +150,13 @@ if __name__ == "__main__":
     instituicao2.setDescricao('Escola João')
     instituicao2.addListaTurma(turma2)
 
+    print()
+    print("1) Instituição:")
+    print(instituicao1.__str__())
+    print('------------------')
+    print("2) Instituição:")
+    print(instituicao2.__str__())
+
     # Criando Curso
     curso1 = Curso()
     curso1.setId('1')
@@ -129,6 +168,13 @@ if __name__ == "__main__":
     curso2.setDescricao('BES')
     curso2.addListaProfessor(professor2)
 
+    print()
+    print("1) Curso:")
+    print(curso1.__str__())
+    print('------------------')
+    print("2) Curso:")
+    print(curso2.__str__())
+
     # Criando Disciplina
     disciplina1 = Disciplina()
     disciplina1.setDescricao(disciplina1)
@@ -139,18 +185,26 @@ if __name__ == "__main__":
     disciplina2.setDescricao(disciplina2)
     disciplina2.setCurso(curso2)
     disciplina2.addListaTurma(turma2)
+
+    print()
+    print("1) Disciplina:")
+    print(disciplina1.__str__())
+    print('------------------')
+    print("2) Disciplina:")
+    print(disciplina2.__str__())
     
     
-
-
+    # Instituição, disciplina e lita de diário da turma1:
     turma1.setInstituicao(instituicao1)
     turma1.setDisciplina(disciplina1)
     turma1.addListaDiario(diario1)
+
+    # Instituição, disciplina e lita de diário da turma2:
     turma2.setInstituicao(instituicao2)
     turma2.setDisciplina(disciplina2)
     turma2.addListaDiario(diario2)
-    turma2.setInstituicao(instituicao2)
-    turma2.setDisciplina(disciplina2)
+ 
+    # Disciplinas dos cursos
     curso1.addListaDisciplina(disciplina1)
     curso2.addListaDisciplina(disciplina2)
 
