@@ -3,7 +3,6 @@ from Model.professor import Professor
 class Curso:
 
     def __init__(self) -> None:
-        self.__professor = Professor()
         self.__id = 1
         self.__descricao = ""
         self.__listaProfessor = []

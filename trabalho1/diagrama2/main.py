@@ -7,6 +7,11 @@ from Model.instituicao import Instituicao
 from Model.disciplina import Disciplina
 from Model.curso import Curso
 
+import sys
+
+sys.setrecursionlimit(5000)
+
+
 if __name__ == "__main__":
     # Criando Aluno
     aluno1 = Aluno()
@@ -185,13 +190,6 @@ if __name__ == "__main__":
     disciplina2.setDescricao(disciplina2)
     disciplina2.setCurso(curso2)
     disciplina2.addListaTurma(turma2)
-
-    print()
-    print("1) Disciplina:")
-    print(disciplina1.__str__())
-    print('------------------')
-    print("2) Disciplina:")
-    print(disciplina2.__str__())
     
     
     # Instituição, disciplina e lita de diário da turma1:
@@ -209,6 +207,12 @@ if __name__ == "__main__":
     curso2.addListaDisciplina(disciplina2)
 
 
-
+    print()
+    print("1) Disciplina:")
+    print(disciplina1.__str__())
+    print('------------------')
+    print("2) Disciplina:")
+    print(disciplina2.__str__())
+    
 
     
