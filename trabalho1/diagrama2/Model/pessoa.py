@@ -1,5 +1,4 @@
-# import datetime
-# from datetime import date
+from datetime import date
 
 class Pessoa: # Classe Pai
 
@@ -31,10 +30,10 @@ class Pessoa: # Classe Pai
     def getCpf(self) -> str:
         return self.__cpf
     
-    def setDataNascimento(self, dataNascimento: set) -> None:
+    def setDataNascimento(self, dataNascimento: date) -> None:
         self.__dataNascimento = dataNascimento
 
-    def getDataNascimento(self) -> str:
+    def getDataNascimento(self) -> date:
         return self.__dataNascimento
     
     def setEmail(self, email: str) -> None:
