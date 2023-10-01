@@ -66,6 +66,7 @@ class Turma:
     
     def __str__(self) -> None:
         return f"ID: {self.getId()}\nDescrição: {self.getDescricao()}\n" \
-               f"Ano: {self.getAno()}\nSemestre: {self.getSemestre()}"
+               f"Ano: {self.getAno()}\nSemestre: {self.getSemestre()}\n" \
+               f"Professor: {self.getProfessor()}"
     
     
