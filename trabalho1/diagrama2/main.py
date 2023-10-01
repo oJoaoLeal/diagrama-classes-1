@@ -1,3 +1,4 @@
+from datetime import datetime
 from Model.aluno import Aluno
 from Model.professor import Professor
 from Model.situacao import Situacao
@@ -14,7 +15,7 @@ if __name__ == "__main__":
     aluno1.setId(98765)
     aluno1.setNome("Eduardo das Flores")
     aluno1.setCpf("657.812.680-13")
-    aluno1.setDataNascimento("25/05/2005")
+    aluno1.setDataNascimento(datetime(day=25,month=5,year=2005,hour=12,minute=15))
     aluno1.setEmail("eduardo_uniacad@gmail.com")
     aluno1.setEndereco("Bom Pastor - Juiz de Fora")
     aluno1.setTelefone("(32) 984236701")
@@ -27,7 +28,7 @@ if __name__ == "__main__":
     aluno2.setId(98653)
     aluno2.setNome("José das Couves")
     aluno2.setCpf("018.575.639-17")
-    aluno2.setDataNascimento("15/05/1999")
+    aluno2.setDataNascimento(datetime(day=18,month=10,year=2004,hour=4,minute=7))
     aluno2.setEmail("josecouves@gmail.com")
     aluno2.setEndereco("Centro - Juiz de Fora")
     aluno2.setTelefone("(32) 988880110")
@@ -41,7 +42,7 @@ if __name__ == "__main__":
     professor1.setId(55875)
     professor1.setNome("Girafales Ramos")
     professor1.setCpf("235.426.112-65")
-    professor1.setDataNascimento("04/07/1980")
+    professor1.setDataNascimento(datetime(day=4,month=7,year=1980,hour=18,minute=45))
     professor1.setEmail("giraramos@yahoo.com.br")
     professor1.setEndereco("MG - Benfica")
     professor1.setTelefone("(32) 999887054")
@@ -53,7 +54,7 @@ if __name__ == "__main__":
     professor2.setId(55665)
     professor2.setNome("Cinthia Teixeira")
     professor2.setCpf("933.127.985-00")
-    professor2.setDataNascimento("27/01/1975")
+    professor2.setDataNascimento(datetime(day=27,month=1,year=1975,hour=22,minute=10))
     professor2.setEmail("cintei@gmail.com")
     professor2.setEndereco("MG - Lima Duarte")
     professor2.setTelefone("32 991753021")
@@ -147,13 +148,18 @@ if __name__ == "__main__":
     aluno2.addListaSituacao(situacao2.getSituacao())
     aluno2.addListaDiario(diario2.getTurma())
 
+    # Turmas e Cursos Professores:
+    professor1.addListaTurma(turma1.getId())
+    professor1.addListaCurso(curso1.getDescricao())
 
-    # Instituição, disciplina e lita de diário da turma1:
+    professor2.addListaTurma(turma2.getId())
+    professor2.addListaCurso(curso2.getDescricao())
+
+    # Instituições, disciplinas e diários das turmas:
     turma1.setInstituicao(instituicao1)
     turma1.setDisciplina(disciplina1)
     turma1.addListaDiario(diario1)
 
-    # Instituição, disciplina e lita de diário da turma2:
     turma2.setInstituicao(instituicao2)
     turma2.setDisciplina(disciplina2)
     turma2.addListaDiario(diario2)
@@ -161,6 +167,7 @@ if __name__ == "__main__":
     # Disciplinas dos cursos
     curso1.addListaDisciplina(disciplina1.getDescricao())
     curso2.addListaDisciplina(disciplina2.getDescricao())
+    
 
     print("1) Aluno:")
     print(aluno1.__str__())

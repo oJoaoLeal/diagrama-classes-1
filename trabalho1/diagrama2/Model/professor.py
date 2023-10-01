@@ -50,5 +50,6 @@ class Professor(Pessoa): # Classe Filho
                f"CPF: {self.getCpf()}\nData de Nascimento: {self.getDataNascimento()}\n" \
                f"Email: {self.getEmail()}\nEndereço: {self.getEndereco()}\n" \
                f"Telefone: {self.getTelefone()}\nIdentidade: {self.getIdentidade()}\n" \
-               f"Matricula: {self.getMatricula()}\nTitulação Maxima: {self.getTitulacaoMaxima()}"
+               f"Matricula: {self.getMatricula()}\nTitulação Maxima: {self.getTitulacaoMaxima()}\n" \
+               f"Turma(s): {self.getListaTurma()}\nCurso(s): {self.getListaCurso()}"
     
