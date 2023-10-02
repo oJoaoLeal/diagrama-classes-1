@@ -30,4 +30,5 @@ class Situacao:
         return self.__listaAluno
     
     def __str__(self) -> None:
-        return f"Situação: {self.getSituacao()}\nAno e Semestre: {self.getAnoSemestre()}"
+        return f"Situação: {self.getSituacao()}\nAno e Semestre: {self.getAnoSemestre()}\n" \
+               f"Aluno(s): {self.getListaAluno()}"

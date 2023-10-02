@@ -30,4 +30,5 @@ class Instituicao:
         return self.__listaTurma
     
     def __str__(self) -> None:
-        return f"ID: {self.getId()}\nDescrição: {self.getDescricao()}"
+        return f"ID: {self.getId()}\nDescrição: {self.getDescricao()}\n" \
+               f"Turma(s): {self.getListaTurma()}"

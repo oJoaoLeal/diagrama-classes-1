@@ -58,4 +58,5 @@ class Aluno(Pessoa): # Classe Filho
                f"Email: {self.getEmail()}\nEndereço: {self.getEndereco()}\n" \
                f"Telefone: {self.getTelefone()}\nIdentidade: {self.getIdentidade()}\n" \
                f"Matricula: {self.getMatricula()}\nAno de Inicio: {self.getAnoInicio()}\n" \
-               f"Semestre de inicio: {self.getSemestreInicio()}"
+               f"Semestre de inicio: {self.getSemestreInicio()}\nSituação(ões): {self.getListaSituacao()}\n" \
+               f"Diário(s): {self.getListaDiario()}\n"

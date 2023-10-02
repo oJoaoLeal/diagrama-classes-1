@@ -3,7 +3,6 @@ from Model.professor import Professor
 class Curso:
 
     def __init__(self) -> None:
-        self.__professor = Professor()
         self.__id = 1
         self.__descricao = ""
         self.__listaProfessor = []
@@ -46,4 +45,5 @@ class Curso:
         return self.__listaDisciplina
     
     def __str__(self) -> None:
-        return f"ID: {self.getId()}\nDescrição: {self.getDescricao()}"
+        return f"ID: {self.getId()}\nDescrição: {self.getDescricao()}\n" \
+               f"Professor(es): {self.getListaProfessor()}\nDisciplina(s): {self.getListaDisciplina()}"
