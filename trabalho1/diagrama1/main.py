@@ -3,6 +3,8 @@ from Model.Nota import Nota
 from Model.ItemNota import ItemNota
 from Model.Participante import Participante
 from Model.Produto import Produto
+from datetime import date
+
 
 if __name__ == '__main__':
 
@@ -18,12 +20,12 @@ if __name__ == '__main__':
 
     nota1 = Nota()
     nota1.setId(510)
-    nota1.setData("25/04/2023")
+    nota1.setData(date(2023, 4, 25))
     nota1.setNumero(5001)
 
     nota2 = Nota()
     nota2.setId(310)
-    nota2.setData("12/01/2023")
+    nota2.setData(date(2023, 1, 12))
     nota2.setNumero(2001)
 
     print()

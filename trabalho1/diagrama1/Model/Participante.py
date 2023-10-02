@@ -1,3 +1,6 @@
+from datetime import date
+
+
 class Participante:
     def __init__(self):
         self.__id = None

@@ -50,5 +50,6 @@ class Nota:
         return total
 
     def __str__(self):
-        return f"ID: {self.getId()}\nData: {self.getData()}\n" \
-               f"Número: {self.getNumero()}\nVrTotal: R${self.getVrTotal()}\n"
+        data_formatada = self.getData().strftime("%d/%m/%Y")
+        return f"ID: {self.getId()}\nData: {data_formatada}\n" \
+               f"Número: {self.getNumero()}\n"
