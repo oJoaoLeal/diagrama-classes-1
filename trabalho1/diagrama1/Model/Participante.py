@@ -1,42 +1,41 @@
 class Participante:
     def __init__(self):
-        self.__id_participante = 0
-        self.__codigo_participante = 0
-        self.__razao_social = ''
-        self.__cnpj = 0
-        # Cada participantes recebe uma nota
-        self.__nota = None
+        self.__id = None
+        self.__codigo = None
+        self.__razao_social = None
+        self.__cnpj = None
+        self.__notas = []  # Associacao: Partipante com Nota
 
-    def setIdParticipante(self, id_participante):
-        self.__id_participante = id_participante
+    def get_id(self):
+        return self.__id
 
-    def getIdParticipante(self):
-        return self.__id_participante
+    def get_codigo(self):
+        return self.__codigo
 
-    def setCodigoParticipante(self, codigo_participante):
-        self.__codigo_participante = codigo_participante
-
-    def getCodigoParticipante(self):
-        return self.__codigo_participante
-
-    def setRazaoSocial(self, razao_social):
-        self.__razao_social = razao_social
-
-    def getRazaoSocial(self):
+    def get_razaoSocial(self):
         return self.__razao_social
 
-    def setCnpj(self, cnpj):
-        self.__cnpj = cnpj
-
-    def getCnpj(self):
+    def get_cnpj(self):
         return self.__cnpj
 
-    def setNotaParticipante(self, nota):
-        self.__nota = nota
+    def set_id(self, id):
+        self.__id = id
 
-    def getNotaParticipante(self):
-        return self.__nota
+    def set_codigo(self, codigo):
+        self.__codigo = codigo
+
+    def set_razaoSocial(self, __razao_social):
+        self.__razao_social = __razao_social
+
+    def set_cnpj(self, cnpj):
+        self.__cnpj = cnpj
+
+    def addNota(self, nota):
+        self.__notas.append(nota)
+
+    def getNotas(self):
+        return self.__notas
 
     def __str__(self):
-        return f"ID: {self.getIdParticipante()}\nCódigo Participante: {self.getCodigoParticipante()}\n" \
-               f"Razão Social: {self.getRazaoSocial()}\nCNPJ: {self.getCnpj()}"
+        return f"ID: {self.get_id()}\nCódigo Participante: {self.get_codigo()}\n" \
+               f"Razão Social: {self.get_razaoSocial()}\nCNPJ: {self.get_cnpj()}"

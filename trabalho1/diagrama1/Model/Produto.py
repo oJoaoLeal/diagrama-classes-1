@@ -1,35 +1,34 @@
 class Produto:
     def __init__(self):
-        self.__id_produto = 0
-        self.__codigo_produto = 0
-        self.__descricao = ''
-        self.__itemNota = ''
-        self.item_nota_lista = []
+        self.__id = None
+        self.__codigo = None
+        self.__descricao = None
+        self.__itensNota = []  # Associacao: recebe uma lista de "ItemNota"
 
-    def setIdProduto(self, id_produto):
-        self.__id_produto = id_produto
+    def getId(self):
+        return self.__id
 
-    def getIdProduto(self):
-        return self.__id_produto
-
-    def setCodigoProduto(self, codigo_produto):
-        self.__codigo_produto = codigo_produto
-
-    def getCodigoProduto(self):
-        return self.__codigo_produto
-
-    def setDescricao(self, descricao):
-        self.__descricao = descricao
+    def getCodigo(self):
+        return self.__codigo
 
     def getDescricao(self):
         return self.__descricao
 
-    def setItemNota(self, item_nota):
-        self.__itemNota = item_nota
+    def setId(self, id):
+        self.__id = id
 
-    def getItemNota(self):
-        return self.__itemNota
+    def setCodigo(self, codigo):
+        self.__codigo = codigo
+
+    def setDescricao(self, descricao):
+        self.__descricao = descricao
+
+    def addNota(self, nota):
+        self.__itensNota.append(nota)
+
+    def getNotas(self):
+        return self.__itensNota
 
     def __str__(self):
-        return f"ID: {self.getIdProduto()}\nCódigo: {self.getCodigoProduto()}\n" \
+        return f"ID: {self.getId()}\nCódigo: {self.getCodigo()}\n" \
                f"Descrição: {self.getDescricao()}"
