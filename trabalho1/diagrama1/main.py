@@ -6,7 +6,7 @@ from Model.Produto import Produto
 from datetime import date
 
 
-if __name__ == '_main_':
+if __name__ == '__main__':
 
     empresa1 = Empresa()
     empresa1.setId(1)
@@ -75,23 +75,23 @@ if __name__ == '_main_':
     produto1.addNota(item2)
 
     print("Empresa:")
-    print(empresa1._str_())
+    print(empresa1.__str__())
 
     print()
     print("Nota:")
-    print(nota1._str_())
+    print(nota1.__str__())
 
     print()
     print("Participante:")
-    print(part1._str_())
+    print(part1.__str__())
 
     print()
     print("Item:")
-    print(item1._str_())
+    print(item1.__str__())
 
     print()
     print("Produto:")
-    print(produto1._str_())
+    print(produto1.__str__())
 
     print()
     print("Itens em Nota:")
@@ -100,4 +100,3 @@ if __name__ == '_main_':
         print(f"Valor Unitário: R${item.getVrUnitario()}")
         print(f"Quantidade: {item.getQuantidade()}")
         print("------------------------")
-

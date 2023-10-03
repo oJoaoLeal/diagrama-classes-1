@@ -1,7 +1,3 @@
-from decimal import Decimal
-from datetime import date
-
-
 class Empresa:
 
     def __init__(self):

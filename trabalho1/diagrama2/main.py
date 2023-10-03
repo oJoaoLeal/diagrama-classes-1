@@ -131,7 +131,7 @@ if __name__ == "__main__":
     aluno2.addListaDiario(diario2)
     aluno2.addListaSituacao(situacao2)
 
-    # Associação: Situação recebe lista de objetos Aluno
+    # Associação: Situação recebe lista de objetos de Aluno
     situacao1.addListaAluno(aluno1)
 
     situacao2.addListaAluno(aluno2)
@@ -162,13 +162,12 @@ if __name__ == "__main__":
     turma2.setDisciplina(disciplina2)
     turma2.setInstituicao(instituicao2)
 
-
     # Associação: Instituição recebe lista objetos de Turma
     instituicao1.addListaTurma(turma1)
     
     instituicao2.addListaTurma(turma2)
 
-    # Associação: Disciplina recebe lista objetos de Turma  e recebe objetos
+    # Associação: Disciplina recebe lista objetos de Turma e recebe objetos
     # de Curso
     disciplina1.addListaTurma(turma1)
     disciplina1.setCurso(curso1)
@@ -189,11 +188,11 @@ if __name__ == "__main__":
     print("------------------")
     print("Situação do Aluno 1:")
     for situacao in aluno1.getListaSituacao():
-        print (situacao)
+        print(situacao)
     print("------------------")
     print("Diário do Aluno 1:")
     for diario in aluno1.getListaDiario():
-        print (diario)
+        print(diario)
     print("------------------")
     print()
     print("2) Aluno:")
@@ -201,11 +200,11 @@ if __name__ == "__main__":
     print("------------------")
     print("Situação do Aluno 2:")
     for situacao in aluno2.getListaSituacao():
-        print (situacao)
+        print(situacao)
     print("------------------")
     print("Diário do Aluno 2:")
     for diario in aluno2.getListaDiario():
-        print (diario)
+        print(diario)
     print("------------------")
     ############################################
     print()
@@ -214,7 +213,7 @@ if __name__ == "__main__":
     print("------------------")
     print("Aluno da Situação 1:")
     for aluno in situacao1.getListaAluno():
-        print (aluno)
+        print(aluno)
     print("------------------")
     print()
     print("2) Situação:")
@@ -222,7 +221,7 @@ if __name__ == "__main__":
     print("------------------")
     print("Aluno da Situação 2:")
     for aluno in situacao2.getListaAluno():
-        print (aluno)
+        print(aluno)
     print("------------------")
     ############################################
     print()
@@ -231,11 +230,11 @@ if __name__ == "__main__":
     print('------------------')
     print("Turma(s) do Professor 1:")
     for turma in professor1.getListaTurma():
-        print (turma)
+        print(turma)
     print("------------------")
     print("Curso(s) do Professor 1:")
     for curso in professor1.getListaCurso():
-        print (curso)
+        print(curso)
     print("------------------")
     print()
     print("2) Professor:")
@@ -243,11 +242,11 @@ if __name__ == "__main__":
     print('------------------')
     print("Turma(s) do Professor 2:")
     for turma in professor2.getListaTurma():
-        print (turma)
+        print(turma)
     print("------------------")
     print("Curso(s) do Professor 2:")
     for curso in professor2.getListaCurso():
-        print (curso)
+        print(curso)
     print("------------------")
     ############################################
     print()
@@ -277,7 +276,7 @@ if __name__ == "__main__":
     print('------------------')
     print("Diários(s) da Turma 1:")
     for diario in turma1.getListaDiario():
-        print (diario)
+        print(diario)
     print('------------------')
     print("Instituição da Turma 1:")
     print(instituicao1.getDescricao())
@@ -294,7 +293,7 @@ if __name__ == "__main__":
     print('------------------')
     print("Diários(s) da Turma 2:")
     for diario in turma2.getListaDiario():
-        print (diario)
+        print(diario)
     print('------------------')
     print("Instituição da Turma 2:")
     print(instituicao2.getDescricao())
@@ -312,7 +311,7 @@ if __name__ == "__main__":
     print('------------------')
     print("Turma(s) da Instituição 1:")
     for turma in instituicao1.getListaTurma():
-        print (turma)
+        print(turma)
     print('------------------')
     print()
     print("2) Instituição:")
@@ -320,7 +319,7 @@ if __name__ == "__main__":
     print('------------------')
     print("Turma(s) da Instituição 2:")
     for turma in instituicao2.getListaTurma():
-        print (turma)
+        print(turma)
     ############################################
     print()
     print("1) Disciplina:")
@@ -328,7 +327,7 @@ if __name__ == "__main__":
     print('------------------')
     print("Turma(s) da Disciplina 1:")
     for turma in disciplina1.getListaTurma():
-        print (turma)
+        print(turma)
     print('------------------')
     print("Curso da Disciplina 1:")
     print(curso1.getDescricao())
@@ -339,31 +338,30 @@ if __name__ == "__main__":
     print('------------------')
     print("Turma(s) da Disciplina 2:")
     for turma in disciplina2.getListaTurma():
-        print (turma)
+        print(turma)
     print('------------------')
     print("Curso da Disciplina 2:")
     print(curso2.getDescricao())
-    ############################################   
+
     print()
     print("1) Curso:")
     print(curso1.__str__())
     print('------------------')
     print("Disciplina(s) do Curso 1:")
     for disciplina in curso1.getListaDisciplina():
-        print (disciplina)
+        print(disciplina)
     print('------------------')
     print("Professor(es) do Curso 1:")
     for professor in curso1.getListaProfessor():
-        print (professor)
+        print(professor)
     print()
     print("2) Curso:")
     print(curso2.__str__())
     print('------------------')
     print("Disciplina(s) do Curso 2:")
     for disciplina in curso2.getListaDisciplina():
-        print (disciplina)
+        print(disciplina)
     print('------------------')
     print("Professor(es) do Curso 2:")
     for professor in curso2.getListaProfessor():
-        print (professor)
-
+        print(professor)

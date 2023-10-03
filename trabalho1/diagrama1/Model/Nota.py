@@ -1,5 +1,5 @@
 class Nota:
-    def _init_(self):
+    def __init__(self):
         self.__id = None
         self.__data = None
         self.__numero = None
@@ -49,7 +49,7 @@ class Nota:
             total += item.getVrUnitario() * item.getQuantidade()
         return total
 
-    def _str_(self):
+    def __str__(self):
         data_formatada = self.getData().strftime("%d/%m/%Y")
         vr_total = self.getVrTotal()
         return f"ID: {self.getId()}\nData: {data_formatada}\n" \
