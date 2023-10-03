@@ -27,6 +27,7 @@ class Curso:
     def removerListaProfessor(self, professor):
         self.__listaProfessor.remove(professor)
 
+
     def getListaProfessor(self):
         return self.__listaProfessor
     
@@ -44,3 +45,4 @@ class Curso:
     
     def __str__(self):
         return f"ID: {self.getId()}\nDescrição: {self.getDescricao()}"
+

@@ -31,3 +31,4 @@ class Instituicao:
     
     def __str__(self):
         return f"ID: {self.getId()}\nDescrição: {self.getDescricao()}"
+

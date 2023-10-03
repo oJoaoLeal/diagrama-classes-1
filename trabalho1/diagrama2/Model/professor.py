@@ -1,6 +1,7 @@
 from Model.pessoa import Pessoa
 
-class Professor(Pessoa): # Classe Filho
+
+class Professor(Pessoa):  # Classe Filho
 
     def __init__(self):
         super().__init__()
@@ -29,7 +30,7 @@ class Professor(Pessoa): # Classe Filho
 
     def removerListaTurma(self, turma):
         self.__listaTurma.remove(turma)
-
+   
     def getListaTurma(self):
         return self.__listaTurma
     

@@ -21,6 +21,7 @@ class Disciplina:
     def setCurso(self, curso):
         self.__curso = curso
 
+
     def getCurso(self):
         return self.__curso
     
@@ -38,5 +39,6 @@ class Disciplina:
     
     def __str__(self):
         return f"ID: {self.getId()}\nDescrição: {self.getDescricao()}"
+
     
     

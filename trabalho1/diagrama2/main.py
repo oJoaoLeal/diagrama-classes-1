@@ -27,6 +27,7 @@ if __name__ == "__main__":
     aluno2.setId(98653)
     aluno2.setNome("José das Couves")
     aluno2.setCpf("018.575.639-17")
+
     aluno2.setDataNascimento("15/08/2020")
     aluno2.setEmail("josecouves@gmail.com")
     aluno2.setEndereco("Centro - Juiz de Fora")
@@ -109,11 +110,11 @@ if __name__ == "__main__":
 
     # Criando Curso
     curso1 = Curso()
-    curso1.setId('1')
+    curso1.setId(1)
     curso1.setDescricao('BSI')
 
     curso2 = Curso()
-    curso2.setId('2')
+    curso2.setId(2)
     curso2.setDescricao('BES')
 
     # Criando Disciplina
@@ -160,6 +161,7 @@ if __name__ == "__main__":
     turma2.setProfessor(professor2)
     turma2.setDisciplina(disciplina2)
     turma2.setInstituicao(instituicao2)
+
 
     # Associação: Instituição recebe lista objetos de Turma
     instituicao1.addListaTurma(turma1)

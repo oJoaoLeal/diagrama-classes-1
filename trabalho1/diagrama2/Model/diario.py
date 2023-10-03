@@ -42,6 +42,7 @@ class Diario:
     def setAluno(self, aluno):
         self.__aluno = aluno
 
+
     def getAluno(self):
         return self.__aluno
     

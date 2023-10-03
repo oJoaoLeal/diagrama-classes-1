@@ -31,3 +31,4 @@ class Situacao:
     
     def __str__(self):
         return f"Situação: {self.getSituacao()}\nAnoSemestre: {self.getAnoSemestre()}"
+

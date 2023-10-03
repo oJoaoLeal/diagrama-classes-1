@@ -1,6 +1,3 @@
-from datetime import date
-
-
 class ItemNota:
     def __init__(self):
         self.__id_item = None

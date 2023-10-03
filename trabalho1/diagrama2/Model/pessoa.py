@@ -33,7 +33,6 @@ class Pessoa: # Classe Pai
 
     def getDataNascimento(self):
         return self.__dataNascimento
-    
     def setEmail(self, email):
         self.__email = email
 
@@ -57,7 +56,7 @@ class Pessoa: # Classe Pai
 
     def getIdentidade(self):
         return self.__identidade
-    
+
     def __str__(self):
         return f"ID: {self.getId()}\nNome: {self.getNome()}\n" \
                f"CPF: {self.getCpf()}\nData de Nascimento: {self.getDataNascimento()}\n" \

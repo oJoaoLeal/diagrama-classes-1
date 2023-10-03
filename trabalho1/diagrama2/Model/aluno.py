@@ -1,6 +1,7 @@
 from Model.pessoa import Pessoa
 
-class Aluno(Pessoa): # Classe Filho
+
+class Aluno(Pessoa):  # Classe Filho
 
     def __init__(self):
         super().__init__()
@@ -38,6 +39,7 @@ class Aluno(Pessoa): # Classe Filho
         self.__listaSituacao.remove(situacao)
 
     def getListaSituacao(self):
+
         return self.__listaSituacao
     
     def setListaDiario(self, diario):
@@ -59,3 +61,4 @@ class Aluno(Pessoa): # Classe Filho
                f"Telefone: {self.getTelefone()}\nIdentidade: {self.getIdentidade()}\n" \
                f"Matricula: {self.getMatricula()}\nAno de Inicio: {self.getAnoInicio()}\n" \
                f"Semestre de inicio: {self.getSemestreInicio()}"
+

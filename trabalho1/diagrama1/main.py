@@ -15,9 +15,6 @@ if __name__ == '__main__':
     empresa1.setEndereco("Rua Halfed, Centro")
     empresa1.setCnpj("25. 101. 1231/0001-15")
 
-    print("Empresa:")
-    print(empresa1.__str__())
-
     nota1 = Nota()
     nota1.setId(510)
     nota1.setData(date(2023, 4, 25))
@@ -28,19 +25,11 @@ if __name__ == '__main__':
     nota2.setData(date(2023, 1, 12))
     nota2.setNumero(2001)
 
-    print()
-    print("Nota:")
-    print(nota1.__str__())
-
     part1 = Participante()
     part1.set_id(12)
     part1.set_codigo(1415)
     part1.set_razaoSocial("Hamburgueria do Murilo")
     part1.set_cnpj("25. 101. 1231/0001-15")
-
-    print()
-    print("Participante:")
-    print(part1.__str__())
 
     item1 = ItemNota()
     item1.setId(91)
@@ -52,18 +41,22 @@ if __name__ == '__main__':
     item2.setVrUnitario(50.00)
     item2.setQuantidade(4)
 
-    print()
-    print("Item:")
-    print(item1.__str__())
-
     produto1 = Produto()
     produto1.setId(41)
     produto1.setCodigo(213)
     produto1.setDescricao("Notebook Gamer Dell")
 
-    print()
-    print("Produto:")
-    print(produto1.__str__())
+    # Associação: Nota recebe um objeto Empresa
+    nota1.setEmpresa(empresa1)
+
+    # Associação: Nota recebe um objeto Participante
+    nota1.setParticipante(part1)
+
+    # Associação: ItemNota recebe um objeto Nota
+    item1.setNota(nota1)
+
+    # Associação: ItemNota recebe um objeto produto
+    item1.setProduto(produto1)
 
     # Associação: Empresa recebe objetos de Nota
     empresa1.addNota(nota1)
@@ -81,6 +74,25 @@ if __name__ == '__main__':
     produto1.addNota(item1)
     produto1.addNota(item2)
 
+    print("Empresa:")
+    print(empresa1.__str__())
+
+    print()
+    print("Nota:")
+    print(nota1.__str__())
+
+    print()
+    print("Participante:")
+    print(part1.__str__())
+
+    print()
+    print("Item:")
+    print(item1.__str__())
+
+    print()
+    print("Produto:")
+    print(produto1.__str__())
+
     print()
     print("Itens em Nota:")
     for item in nota1.getListaItensNota():
@@ -89,6 +101,3 @@ if __name__ == '__main__':
         print(f"Quantidade: {item.getQuantidade()}")
         print("------------------------")
 
-    print()
-    print("VrTotal:")
-    print(f"R$:{nota1.getVrTotal()}")
