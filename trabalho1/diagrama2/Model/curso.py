@@ -1,5 +1,6 @@
 from Model.professor import Professor
 
+
 class Curso:
 
     def __init__(self) -> None:
@@ -29,7 +30,7 @@ class Curso:
     def removerListaProfessor(self, professor) -> None:
         self.__listaProfessor.remove(professor)
 
-    def getListaProfessor(self) -> None:
+    def getListaProfessor(self) -> list:
         return self.__listaProfessor
     
     def setListaDisciplina(self, disciplina) -> None:
@@ -41,9 +42,9 @@ class Curso:
     def removerListaDisciplina(self, disciplina) -> None:
         self.__listaDisciplina.remove(disciplina)
 
-    def getListaDisciplina(self) -> None:
+    def getListaDisciplina(self) -> list:
         return self.__listaDisciplina
     
-    def __str__(self) -> None:
+    def __str__(self) -> str:
         return f"ID: {self.getId()}\nDescrição: {self.getDescricao()}\n" \
                f"Professor(es): {self.getListaProfessor()}\nDisciplina(s): {self.getListaDisciplina()}"

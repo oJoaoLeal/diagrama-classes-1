@@ -1,6 +1,4 @@
-from datetime import datetime
-
-class Pessoa: # Classe Pai
+class Pessoa:  # Classe Pai
 
     def __init__(self) -> None:
         self.__id = 1
@@ -30,10 +28,10 @@ class Pessoa: # Classe Pai
     def getCpf(self) -> str:
         return self.__cpf
     
-    def setDataNascimento(self, dataNascimento: datetime) -> None:
+    def setDataNascimento(self, dataNascimento) -> None:
         self.__dataNascimento = dataNascimento
 
-    def getDataNascimento(self) -> datetime:
+    def getDataNascimento(self) -> str:
         return self.__dataNascimento
     
     def setEmail(self, email: str) -> None:
@@ -60,7 +58,7 @@ class Pessoa: # Classe Pai
     def getIdentidade(self) -> str:
         return self.__identidade
     
-    def __str__(self) -> None:
+    def __str__(self) -> str:
         return f"ID: {self.getId()}\nNome: {self.getNome()}\n" \
                f"CPF: {self.getCpf()}\nData de Nascimento: {self.getDataNascimento()}\n" \
                f"Email: {self.getEmail()}\nEndereço: {self.getEndereco()}\n" \

@@ -1,6 +1,7 @@
 from Model.pessoa import Pessoa
 
-class Professor(Pessoa): # Classe Filho
+
+class Professor(Pessoa):  # Classe Filho
 
     def __init__(self) -> None:
         super().__init__()
@@ -30,7 +31,7 @@ class Professor(Pessoa): # Classe Filho
     def removerListaTurma(self, turma) -> None:
         self.__listaTurma.remove(turma)
 
-    def getListaTurma(self) -> None:
+    def getListaTurma(self) -> list:
         return self.__listaTurma
     
     def setListaCurso(self, curso) -> None:
@@ -42,10 +43,10 @@ class Professor(Pessoa): # Classe Filho
     def removerListaCurso(self, curso) -> None:
         self.__listaCurso.remove(curso)
 
-    def getListaCurso(self) -> None:
+    def getListaCurso(self) -> list:
         return self.__listaCurso
     
-    def __str__(self) -> None:
+    def __str__(self) -> str:
         return f"ID: {self.getId()}\nNome: {self.getNome()}\n" \
                f"CPF: {self.getCpf()}\nData de Nascimento: {self.getDataNascimento()}\n" \
                f"Email: {self.getEmail()}\nEndereço: {self.getEndereco()}\n" \

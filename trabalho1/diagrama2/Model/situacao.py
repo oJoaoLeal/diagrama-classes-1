@@ -26,9 +26,9 @@ class Situacao:
     def removerListaAluno(self, aluno) -> None:
         self.__listaAluno.remove(aluno)
 
-    def getListaAluno(self) -> None:
+    def getListaAluno(self) -> list:
         return self.__listaAluno
     
-    def __str__(self) -> None:
+    def __str__(self) -> str:
         return f"Situação: {self.getSituacao()}\nAno e Semestre: {self.getAnoSemestre()}\n" \
                f"Aluno(s): {self.getListaAluno()}"

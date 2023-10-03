@@ -21,7 +21,7 @@ class Disciplina:
     def setCurso(self, curso) -> None:
         self.__curso = curso
 
-    def getCurso(self) -> None:
+    def getCurso(self) -> str:
         return self.__curso
     
     def setListaTurma(self, turma) -> None:
@@ -33,10 +33,10 @@ class Disciplina:
     def removerListaTurma(self, turma) -> None:
         self.__listaTurma.remove(turma)
 
-    def getListaTurma(self) -> None:
+    def getListaTurma(self) -> list:
         return self.__listaTurma
     
-    def __str__(self) -> None:
+    def __str__(self) -> str:
         return f"ID: {self.getId()}\nDescrição: {self.getDescricao()}\n" \
                f"Curso: {self.getCurso()}\nTurma(s): {self.getListaTurma()}"
     

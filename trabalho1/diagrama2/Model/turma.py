@@ -43,13 +43,13 @@ class Turma:
     def setDisciplina(self, disciplina) -> None:
         self.__disciplina = disciplina
 
-    def getDisciplina(self) -> None:
+    def getDisciplina(self) -> str:
         return self.__disciplina
     
     def setProfessor(self, professor) -> None:
         self.__professor = professor
 
-    def getProfessor(self) -> None:
+    def getProfessor(self) -> str:
         return self.__professor
     
     def setListaDiario(self, diario) -> None:
@@ -61,10 +61,10 @@ class Turma:
     def removerListaDiario(self, diario) -> None:
         self.__listaDiario.remove(diario)
 
-    def getListaDiario(self) -> None:
+    def getListaDiario(self) -> list:
         return self.__listaDiario
     
-    def __str__(self) -> None:
+    def __str__(self) -> str:
         return f"ID: {self.getId()}\nDescrição: {self.getDescricao()}\n" \
                f"Ano: {self.getAno()}\nSemestre: {self.getSemestre()}\n" \
                f"Professor: {self.getProfessor()}"

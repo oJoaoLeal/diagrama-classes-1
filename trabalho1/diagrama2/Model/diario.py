@@ -42,16 +42,16 @@ class Diario:
     def setAluno(self, aluno) -> None:
         self.__aluno = aluno
 
-    def getAluno(self) -> None:
+    def getAluno(self) -> str:
         return self.__aluno
     
     def setTurma(self, turma) -> None:
         self.__turma = turma
 
-    def getTurma(self) -> None:
+    def getTurma(self) -> str:
         return self.__turma
     
-    def __str__(self) -> None:
+    def __str__(self) -> str:
         return f"V1: {self.getV1()}\nV2: {self.getV2()}\n" \
                f"VS: {self.getVS()}\nVT: {self.getVT()}\n" \
                f"Faltas: {self.getFaltas()}\nAluno: {self.getAluno()}\n" \
