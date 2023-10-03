@@ -1,43 +1,42 @@
 class Disciplina:
 
-    def __init__(self) -> None:
-        self.__id = 1
-        self.__descricao = ""
-        self.__curso = ""
+    def __init__(self):
+        self.__id = None
+        self.__descricao = None
+        self.__curso = None
         self.__listaTurma = []
 
-    def setId(self, id: int) -> None:
+    def setId(self, id):
         self.__id = id
 
-    def getId(self) -> int:
+    def getId(self):
         return self.__id
     
-    def setDescricao(self, descricao: str) -> None:
+    def setDescricao(self, descricao):
         self.__descricao = descricao
 
-    def getDescricao(self) -> str:
+    def getDescricao(self):
         return self.__descricao
     
-    def setCurso(self, curso) -> None:
+    def setCurso(self, curso):
         self.__curso = curso
 
-    def getCurso(self) -> None:
+    def getCurso(self):
         return self.__curso
     
-    def setListaTurma(self, turma) -> None:
+    def setListaTurma(self, turma):
         self.__listaTurma = turma
 
-    def addListaTurma(self, turma) -> None:
+    def addListaTurma(self, turma):
         self.__listaTurma.append(turma)
 
-    def removerListaTurma(self, turma) -> None:
+    def removerListaTurma(self, turma):
         self.__listaTurma.remove(turma)
 
-    def getListaTurma(self) -> None:
+    def getListaTurma(self):
         return self.__listaTurma
     
-    def __str__(self) -> None:
-        return f"ID: {self.getId()}\nDescrição: {self.getDescricao()}\n" \
-               f"Curso: {self.getCurso()}\nTurma(s): {self.getListaTurma()}"
+    def __str__(self):
+        return f"ID: {self.getId()}\nDescrição: {self.getDescricao()}"
     
     

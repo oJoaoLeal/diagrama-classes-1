@@ -1,72 +1,71 @@
 class Turma:
 
-    def __init__(self) -> None:
-        self.__id = 1
-        self.__descricao = 1
-        self.__ano = 1
-        self.__semestre = 1
-        self.__instituicao = ""
-        self.__disciplina = ""
-        self.__professor = ""
+    def __init__(self):
+        self.__id = None
+        self.__descricao = None
+        self.__ano = None
+        self.__semestre = None
+        self.__instituicao = None
+        self.__disciplina = None
+        self.__professor = None
         self.__listaDiario = []
 
-    def setId(self, id: int) -> None:
+    def setId(self, id):
         self.__id = id
 
-    def getId(self) -> int:
+    def getId(self):
         return self.__id
     
-    def setDescricao(self, descricao: int) -> None:
+    def setDescricao(self, descricao):
         self.__descricao = descricao
 
-    def getDescricao(self) -> int:
+    def getDescricao(self):
         return self.__descricao
     
-    def setAno(self, ano: int) -> None:
+    def setAno(self, ano):
         self.__ano = ano
 
-    def getAno(self) -> int:
+    def getAno(self):
         return self.__ano
 
-    def setSemestre(self, semestre: int) -> None:
+    def setSemestre(self, semestre):
         self.__semestre = semestre
 
-    def getSemestre(self) -> int:
+    def getSemestre(self):
         return self.__semestre
     
-    def setInstituicao(self, instituicao) -> None:
+    def setInstituicao(self, instituicao):
         self.__instituicao = instituicao
 
-    def getInstituicao(self) -> None:
+    def getInstituicao(self):
         return self.__instituicao
     
-    def setDisciplina(self, disciplina) -> None:
+    def setDisciplina(self, disciplina):
         self.__disciplina = disciplina
 
-    def getDisciplina(self) -> None:
+    def getDisciplina(self):
         return self.__disciplina
     
-    def setProfessor(self, professor) -> None:
+    def setProfessor(self, professor):
         self.__professor = professor
 
-    def getProfessor(self) -> None:
+    def getProfessor(self):
         return self.__professor
     
-    def setListaDiario(self, diario) -> None:
+    def setListaDiario(self, diario):
         self.__listaDiario = diario
 
-    def addListaDiario(self, diario) -> None:
+    def addListaDiario(self, diario):
         self.__listaDiario.append(diario)
 
-    def removerListaDiario(self, diario) -> None:
+    def removerListaDiario(self, diario):
         self.__listaDiario.remove(diario)
 
-    def getListaDiario(self) -> None:
+    def getListaDiario(self):
         return self.__listaDiario
     
-    def __str__(self) -> None:
+    def __str__(self):
         return f"ID: {self.getId()}\nDescrição: {self.getDescricao()}\n" \
-               f"Ano: {self.getAno()}\nSemestre: {self.getSemestre()}\n" \
-               f"Professor: {self.getProfessor()}"
+               f"Ano: {self.getAno()}\nSemestre: {self.getSemestre()}"
     
     
